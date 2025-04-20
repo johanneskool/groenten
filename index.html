@@ -32,16 +32,16 @@
       </div>
     </header>
 
-    <!-- Hero -->
-    <section class="text-center py-16 px-6 bg-green-100">
-      <h2 class="text-4xl font-extrabold text-green-900 mb-4 shadow-sm">Verras met een bosje groenten</h2>
-      <p class="max-w-2xl mx-auto text-lg text-gray-800 mb-6">
-        Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
-      </p>
-      <div class="inline-block border-[5px] rounded-xl shadow-lg p-2" style="border-color: var(--kraft-bruin);">
-        <img src="image.jpg" alt="Bosje groenten" class="mx-auto w-80 h-auto rounded-md shadow-md">
-      </div>
-    </section>
+    <!-- Hero met achtergrondafbeelding -->
+<section class="relative h-[500px] flex items-center justify-center text-center text-white" style="background-image: url('image.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-green-900 bg-opacity-60"></div>
+  <div class="relative z-10 px-4 max-w-2xl">
+    <h2 class="text-4xl font-extrabold mb-4 drop-shadow-md">Verras met een bosje groenten</h2>
+    <p class="text-lg drop-shadow-sm">
+      Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
+    </p>
+  </div>
+</section>
 
     <!-- Waarom groenten -->
     <section id="idee" class="max-w-4xl mx-auto px-6 py-12">
@@ -147,7 +147,7 @@
         <a href="mailto:info@hartelijkegroenten.nl" class="text-green-800 hover:text-green-600"><i data-feather="mail"></i></a>
         <a href="#" class="text-green-800 hover:text-green-600"><i data-feather="globe"></i></a>
       </div>
-      <p>© 2025v4 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.</p>
+      <p>© 2025v5 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.</p>
     </footer>
 
     <script>feather.replace()</script>
