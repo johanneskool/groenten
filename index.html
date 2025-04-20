@@ -6,6 +6,10 @@
     <title>De Hartelijke Groenten</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23168a4b' d='M32 4C18 16 14 28 18 40s14 20 14 20 10-6 14-20-4-24-14-36z'/%3E%3C/svg%3E" />
+
     <style>
       :root {
         --kraft-bruin: #4B2E1A;
@@ -33,15 +37,15 @@
     </header>
 
     <!-- Hero met achtergrondafbeelding -->
-<section class="relative h-[500px] flex items-center justify-center text-center text-white" style="background-image: url('image.jpg'); background-size: cover; background-position: center;">
-  <div class="absolute inset-0 bg-green-900 bg-opacity-60"></div>
-  <div class="relative z-10 px-4 max-w-2xl">
-    <h2 class="text-4xl font-extrabold mb-4 drop-shadow-md">Verras met een bosje groenten</h2>
-    <p class="text-lg drop-shadow-sm">
-      Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
-    </p>
-  </div>
-</section>
+    <section class="relative h-[600px] py-20 flex items-center justify-center text-center text-white" style="background-image: url('image.jpg'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-green-900 bg-opacity-50"></div>
+      <div class="relative z-10 px-4 max-w-2xl">
+        <h2 class="text-5xl font-extrabold mb-4 drop-shadow-md">Verras met een bosje groenten</h2>
+        <p class="text-lg drop-shadow-sm">
+          Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
+        </p>
+      </div>
+    </section>
 
     <!-- Waarom groenten -->
     <section id="idee" class="max-w-4xl mx-auto px-6 py-12">
@@ -61,41 +65,41 @@
         <h3 class="text-2xl font-bold text-green-800 mb-8 text-center">Onze bosjes</h3>
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
-          <!-- Product 1 -->
+          <!-- Product -->
           <div class="bg-green-50 border-[4px] p-4 rounded-lg shadow flex items-center gap-4" style="border-color: var(--kraft-bruin);">
             <img src="klein1.jpg.PNG" alt="Kleurrijk boeket" class="w-24 h-24 object-cover rounded border-2 p-0.5" style="border-color: var(--kraft-bruin);">
             <div class="flex-1">
               <h4 class="text-xl font-semibold text-green-700 mb-1">Kleurrijk</h4>
               <p class="text-sm text-gray-600 mb-1">Paprika, wortel, biet en snijbiet.</p>
               <p class="text-xl font-bold text-green-900 mb-2">€9,95</p>
-              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
-                Voeg toe aan mandje
+              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition flex justify-center items-center gap-2" title="Voeg toe aan winkelmandje">
+                <i data-feather="shopping-cart"></i>
               </button>
             </div>
           </div>
 
-          <!-- Product 2 -->
+          <!-- Product -->
           <div class="bg-green-50 border-[4px] p-4 rounded-lg shadow flex items-center gap-4" style="border-color: var(--kraft-bruin);">
             <img src="klein2.PNG" alt="Seizoensmix" class="w-24 h-24 object-cover rounded border-2 p-0.5" style="border-color: var(--kraft-bruin);">
             <div class="flex-1">
               <h4 class="text-xl font-semibold text-green-700 mb-1">Seizoensmix</h4>
               <p class="text-sm text-gray-600 mb-1">Altijd vers, altijd verrassend.</p>
               <p class="text-xl font-bold text-green-900 mb-2">€11,95</p>
-              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
-                Voeg toe aan mandje
+              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition flex justify-center items-center gap-2" title="Voeg toe aan winkelmandje">
+                <i data-feather="shopping-cart"></i>
               </button>
             </div>
           </div>
 
-          <!-- Product 3 -->
+          <!-- Product -->
           <div class="bg-green-50 border-[4px] p-4 rounded-lg shadow flex items-center gap-4" style="border-color: var(--kraft-bruin);">
             <img src="klein3.PNG" alt="Pittig boeket" class="w-24 h-24 object-cover rounded border-2 p-0.5" style="border-color: var(--kraft-bruin);">
             <div class="flex-1">
               <h4 class="text-xl font-semibold text-green-700 mb-1">Pittig</h4>
               <p class="text-sm text-gray-600 mb-1">Met radijs, rucola en rode ui.</p>
               <p class="text-xl font-bold text-green-900 mb-2">€10,50</p>
-              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
-                Voeg toe aan mandje
+              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition flex justify-center items-center gap-2" title="Voeg toe aan winkelmandje">
+                <i data-feather="shopping-cart"></i>
               </button>
             </div>
           </div>
@@ -147,7 +151,7 @@
         <a href="mailto:info@hartelijkegroenten.nl" class="text-green-800 hover:text-green-600"><i data-feather="mail"></i></a>
         <a href="#" class="text-green-800 hover:text-green-600"><i data-feather="globe"></i></a>
       </div>
-      <p>© 2025v5 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.</p>
+      <p>© 2025v4 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.</p>
     </footer>
 
     <script>feather.replace()</script>
