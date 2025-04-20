@@ -1,173 +1,223 @@
 <!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>De Hartelijke Groenten</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
+<html lang="nl" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>De Hartelijke Groenten</title>
 
-    <!-- SVG Favicon -->
-    <link rel="icon" type="image/png" href="favicon.PNG">
-    <style>
-      :root {
-        --kraft-bruin: #4B2E1A;
-      }
-    </style>
-  </head>
-  <body class="bg-green-50 text-gray-800">
+  <!-- Tailwind CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- Header -->
-    <header class="bg-white shadow-md">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <div class="flex items-center gap-3">
-          <img src="home.jpg" alt="Logo De Hartelijke Groenten" class="h-10 w-10 rounded-full object-cover border-2 border-green-700">
-          <h1 class="text-2xl font-bold text-green-700 tracking-wide">De Hartelijke Groenten</h1>
-        </div>
-        <nav class="flex items-center gap-6 text-sm sm:text-base">
-          <a href="#idee" class="text-green-700 hover:underline">Ons idee</a>
-          <a href="#producten" class="text-green-700 hover:underline">Producten</a>
-          <a href="#contact" class="text-green-700 hover:underline">Contact</a>
-          <div class="relative">
-            <button class="text-green-800 hover:text-green-600">
-              <i data-feather="shopping-cart"></i>
-            </button>
-            <span class="absolute -top-2 -right-2 bg-green-700 text-white text-xs rounded-full px-1.5">0</span>
-          </div>
-        </nav>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rufina:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4C18 16 14 28 18 40s14 20 14 20 10-6 14-20-4-24-14-36z' fill='%232E7D4F'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    /* ---------- THEMA ---------- */
+    :root{
+      --groen-licht:#e6f1ea;
+      --groen:#2e7d4f;
+      --groen-donker:#1e5937;
+      --kraft:#3e2718;
+      --accent:#c45535;        /* warme terracotta */
+    }
+    /* ---------- BASIS ---------- */
+    body{font-family:"Inter",system-ui,sans-serif;}
+    h1,h2,h3,h4{font-family:"Rufina",serif;}
+    /* papier texture via inline SVG noise */
+    .texture{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23fff'/%3E%3Ccircle cx='10' cy='10' r='1' fill='%23d9d9d9'/%3E%3Ccircle cx='50' cy='50' r='1' fill='%23d9d9d9'/%3E%3Ccircle cx='90' cy='150' r='1' fill='%23d9d9d9'/%3E%3C/svg%3E");}
+    /* hover + bump */
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(0,0,0,.12);}
+    @keyframes bump{0%{transform:scale(1)}50%{transform:scale(1.3)}100%{transform:scale(1)}}
+    /* reveal */
+    .reveal{opacity:0;transform:translateY(12px);transition:.6s ease;}
+    .reveal.show{opacity:1;transform:none;}
+  </style>
+</head>
+<body class="bg-[var(--groen-licht)] text-gray-800">
+
+<!-- ===== HEADER ===== -->
+<header class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-3">
+      <img src="home.jpg" alt="Logo" class="h-10 w-10 rounded-full object-cover border-2 border-[var(--groen)]">
+      <h1 class="text-2xl font-bold text-[var(--groen)] tracking-wide">De Hartelijke Groenten</h1>
+    </div>
+    <nav aria-label="Primaire navigatie" class="flex items-center gap-6 text-sm sm:text-base">
+      <a href="#idee" class="text-[var(--groen)] hover:underline">Ons idee</a>
+      <a href="#producten" class="text-[var(--groen)] hover:underline">Producten</a>
+      <a href="#contact" class="text-[var(--groen)] hover:underline">Contact</a>
+      <div class="relative">
+        <button id="cart-btn" class="text-[var(--groen-donker)] hover:text-[var(--groen)]">
+          <i data-feather="shopping-cart"></i>
+        </button>
+        <span id="cart-badge"
+              class="absolute -top-2 -right-2 bg-[var(--accent)] text-white text-xs rounded-full px-1.5">0</span>
       </div>
-    </header>
+    </nav>
+  </div>
+</header>
 
-    <!-- Hero met achtergrondafbeelding -->
-    <section class="relative h-[600px] py-20 flex items-center justify-center text-center text-white" style="background-image: url('image.jpg'); background-size: cover; background-position: center;">
-      <div class="absolute inset-0 bg-green-900 bg-opacity-50"></div>
-      <div class="relative z-10 px-4 max-w-2xl">
-        <h2 class="text-5xl font-extrabold mb-4 drop-shadow-md">Verras met een bosje groenten</h2>
-        <p class="text-lg drop-shadow-sm">
-          Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
-        </p>
-      </div>
-    </section>
-
-    <!-- Waarom groenten -->
-    <section id="idee" class="max-w-4xl mx-auto px-6 py-12">
-      <h3 class="text-2xl font-bold text-green-800 mb-4">Waarom groenten?</h3>
-      <p class="text-gray-700 mb-4">
-        Bloemen zijn vaak geïmporteerd, bespoten en snel verwelkt. Groenten daarentegen zijn voedzaam, lokaal en veelzijdig.
-        Een bosje groenten is niet alleen origineel, maar ook een statement voor duurzaamheid.
-      </p>
-      <p class="text-gray-700">
-        Wij gebruiken seizoensgroenten en verpakken alles in papier of herbruikbare materialen. Geen plastic, geen verspilling.
-      </p>
-    </section>
-
-    <!-- Producten -->
-    <section id="producten" class="bg-white py-12 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h3 class="text-2xl font-bold text-green-800 mb-8 text-center">Onze bosjes</h3>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-          <!-- Product 1 -->
-          <div class="bg-green-100 border-[3px] border-green-700 rounded-lg p-4 shadow-sm flex gap-4 items-start">
-            <img src="klein1.jpg.PNG" alt="Kleurrijk boeket" class="w-20 h-20 object-cover rounded border-2 border-green-800 p-0.5">
-            <div class="flex-1 flex flex-col justify-between gap-2">
-              <div>
-                <h4 class="text-lg font-semibold text-green-800">Kleurrijk</h4>
-                <p class="text-sm text-gray-700">Paprika, wortel, biet en snijbiet.</p>
-              </div>
-              <div class="flex items-center justify-between mt-1">
-                <span class="text-xl font-bold text-green-900">€9,95</span>
-                <button class="bg-green-700 text-white p-2 rounded hover:bg-green-800 transition" title="Voeg toe aan winkelmandje">
-                  <i data-feather="shopping-cart" class="w-5 h-5"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product 2 -->
-          <div class="bg-green-100 border-[3px] border-green-700 rounded-lg p-4 shadow-sm flex gap-4 items-start">
-            <img src="klein2.PNG" alt="Seizoensmix" class="w-20 h-20 object-cover rounded border-2 border-green-800 p-0.5">
-            <div class="flex-1 flex flex-col justify-between gap-2">
-              <div>
-                <h4 class="text-lg font-semibold text-green-800">Seizoensmix</h4>
-                <p class="text-sm text-gray-700">Altijd vers, altijd verrassend.</p>
-              </div>
-              <div class="flex items-center justify-between mt-1">
-                <span class="text-xl font-bold text-green-900">€11,95</span>
-                <button class="bg-green-700 text-white p-2 rounded hover:bg-green-800 transition" title="Voeg toe aan winkelmandje">
-                  <i data-feather="shopping-cart" class="w-5 h-5"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product 3 -->
-          <div class="bg-green-100 border-[3px] border-green-700 rounded-lg p-4 shadow-sm flex gap-4 items-start">
-            <img src="klein3.PNG" alt="Pittig boeket" class="w-20 h-20 object-cover rounded border-2 border-green-800 p-0.5">
-            <div class="flex-1 flex flex-col justify-between gap-2">
-              <div>
-                <h4 class="text-lg font-semibold text-green-800">Pittig</h4>
-                <p class="text-sm text-gray-700">Met radijs, rucola en rode ui.</p>
-              </div>
-              <div class="flex items-center justify-between mt-1">
-                <span class="text-xl font-bold text-green-900">€10,50</span>
-                <button class="bg-green-700 text-white p-2 rounded hover:bg-green-800 transition" title="Voeg toe aan winkelmandje">
-                  <i data-feather="shopping-cart" class="w-5 h-5"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Samenwerken -->
-    <section class="bg-green-100 py-12 px-6 text-center border-t-4" style="border-color: var(--kraft-bruin);">
-      <h3 class="text-2xl font-bold text-green-900 mb-4">Samenwerken?</h3>
-      <p class="text-gray-800 max-w-xl mx-auto mb-6">
-        Ben jij een lokale boer of teler met mooie producten? We werken graag samen met mensen die onze visie op duurzaamheid delen.
-      </p>
-      <a href="mailto:samenwerken@hartelijkegroenten.nl"
-         class="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transition">
-        Neem contact op
+<!-- ===== HERO ===== -->
+<section class="relative md:flex md:min-h-[70vh]">
+  <!-- afbeelding rechts op desktop -->
+  <div class="hidden md:block md:w-1/2">
+    <img src="image.jpg" alt="" class="w-full h-full object-cover">
+  </div>
+  <!-- tekst -->
+  <div class="relative w-full md:w-1/2 flex items-center justify-center text-center text-white py-20"
+       style="background-image:url('image.jpg');background-size:cover;background-position:center">
+    <div class="absolute inset-0 bg-[var(--groen-donker)] bg-opacity-60 texture"></div>
+    <div class="relative z-10 max-w-xl px-4 space-y-6">
+      <h2 class="text-5xl font-extrabold drop-shadow-lg leading-tight tracking-wider">Verras met een bosje groenten</h2>
+      <p class="text-lg drop-shadow-sm">Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.</p>
+      <a href="#producten"
+         class="inline-block mt-4 bg-[var(--accent)] hover:bg-[var(--groen)] transition px-8 py-3 rounded-full text-white font-semibold">
+        Ontdek onze bosjes
       </a>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Testimonials -->
-    <section class="max-w-4xl mx-auto px-6 py-12">
-      <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">Wat mensen zeggen</h3>
-      <div class="grid gap-6 sm:grid-cols-2">
-        <div class="bg-white rounded-lg p-4 shadow-md border-l-[6px]" style="border-color: var(--kraft-bruin);">
-          <p class="text-gray-700 italic">“Ik gaf het als cadeau en kreeg direct een uitnodiging voor het diner!”</p>
-          <p class="text-sm mt-2 text-gray-500">— Marije uit Utrecht</p>
+<!-- diagonale divider -->
+<svg class="-mt-1" viewBox="0 0 100 6" preserveAspectRatio="none"><polygon fill="var(--groen-licht)" points="0,6 100,0 100,6"/></svg>
+
+<!-- ===== WAAROM ===== -->
+<section id="idee" class="reveal max-w-4xl mx-auto px-6 py-12">
+  <h3 class="text-3xl font-bold text-[var(--groen)] mb-4">Waarom groenten?</h3>
+  <p class="text-gray-700 mb-4">
+    Bloemen zijn vaak geïmporteerd, bespoten en snel verwelkt. Groenten daarentegen zijn voedzaam, lokaal en veelzijdig.
+    Een bosje groenten is niet alleen origineel, maar ook een statement voor duurzaamheid.
+  </p>
+  <p class="text-gray-700">
+    Wij gebruiken seizoensgroenten en verpakken alles in papier of herbruikbare materialen. Geen plastic, geen verspilling.
+  </p>
+</section>
+
+<!-- diagonale divider -->
+<svg viewBox="0 0 100 6" preserveAspectRatio="none"><polygon fill="#ffffff" points="0,0 100,6 0,6"/></svg>
+
+<!-- ===== PRODUCTEN ===== -->
+<section id="producten" class="bg-white py-12 px-6 reveal">
+  <div class="max-w-5xl mx-auto">
+    <h3 class="text-3xl font-bold text-[var(--groen)] mb-10 text-center">Onze bosjes</h3>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- PRODUCT TEMPLATE -->
+      <template id="card-template">
+        <div class="card bg-[var(--groen-licht)] texture border-[3px] border-[var(--groen)] rounded-lg p-4 shadow-sm flex gap-4 items-start transition transform">
+          <img data-img alt="" class="w-20 h-20 object-cover rounded border-2 border-[var(--groen-donker)] p-0.5" loading="lazy">
+          <div class="flex-1 flex flex-col justify-between gap-2">
+            <div>
+              <h4 data-title class="text-lg font-semibold text-[var(--groen)]"></h4>
+              <p data-desc class="text-sm text-gray-700"></p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span data-price class="text-xl font-bold text-[var(--groen-donker)]"></span>
+              <button class="add bg-[var(--accent)] hover:bg-[var(--groen-donker)] text-white p-2 rounded transition"
+                      title="Voeg toe aan winkelmandje">
+                <i data-feather="shopping-cart" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="bg-white rounded-lg p-4 shadow-md border-l-[6px]" style="border-color: var(--kraft-bruin);">
-          <p class="text-gray-700 italic">“Eindelijk een cadeautje zonder verspilling. En het staat prachtig op tafel.”</p>
-          <p class="text-sm mt-2 text-gray-500">— Jeroen uit Nijmegen</p>
-        </div>
-      </div>
-    </section>
+      </template>
 
-    <!-- Contact -->
-    <section id="contact" class="bg-green-800 text-white py-12 px-6">
-      <div class="max-w-2xl mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-4">Heb je vragen of speciale wensen?</h3>
-        <p class="mb-4">Mail ons via <a href="mailto:info@hartelijkegroenten.nl" class="underline text-yellow-200 hover:text-white">info@hartelijkegroenten.nl</a></p>
-        <p class="text-sm text-green-200">We reageren meestal binnen één werkdag.</p>
-      </div>
-    </section>
+      <!-- Cards rendered by JS -->
+      <div id="product-grid" class="contents"></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-green-50 text-center text-sm text-gray-600 py-6">
-      <div class="flex justify-center gap-6 mb-2">
-        <a href="#" class="text-green-800 hover:text-green-600"><i data-feather="instagram"></i></a>
-        <a href="mailto:info@hartelijkegroenten.nl" class="text-green-800 hover:text-green-600"><i data-feather="mail"></i></a>
-        <a href="#" class="text-green-800 hover:text-green-600"><i data-feather="globe"></i></a>
-      </div>
-      <p>© 2025v4 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.</p>
-    </footer>
+<!-- ===== SAMENWERKEN ===== -->
+<section class="bg-[var(--groen-licht)] py-14 px-6 text-center border-t-4 border-[var(--kraft)] reveal">
+  <h3 class="text-3xl font-bold text-[var(--groen)] mb-4">Samenwerken?</h3>
+  <p class="text-gray-800 max-w-xl mx-auto mb-8">
+    Ben jij een lokale boer of teler met mooie producten? We werken graag samen met mensen die onze visie op duurzaamheid delen.
+  </p>
+  <a href="mailto:samenwerken@hartelijkegroenten.nl"
+     class="inline-block bg-[var(--accent)] hover:bg-[var(--groen)] px-8 py-3 rounded-full text-white font-semibold transition">
+    Neem contact op
+  </a>
+</section>
 
-    <script>feather.replace()</script>
-  </body>
+<!-- ===== TESTIMONIALS ===== -->
+<section class="max-w-4xl mx-auto px-6 py-16 reveal">
+  <h3 class="text-3xl font-bold text-[var(--groen)] mb-10 text-center">Wat mensen zeggen</h3>
+  <div class="grid gap-6 sm:grid-cols-2">
+    <blockquote class="bg-white texture rounded-lg p-6 shadow-md border-l-[6px] border-[var(--kraft)]">
+      <p class="text-[var(--groen-donker)] italic">“Ik gaf het als cadeau en kreeg direct een uitnodiging voor het diner!”</p>
+      <cite class="text-sm mt-2 text-gray-500">— Marije uit Utrecht</cite>
+    </blockquote>
+    <blockquote class="bg-white texture rounded-lg p-6 shadow-md border-l-[6px] border-[var(--kraft)]">
+      <p class="text-[var(--groen-donker)] italic">“Eindelijk een cadeautje zonder verspilling. En het staat prachtig op tafel.”</p>
+      <cite class="text-sm mt-2 text-gray-500">— Jeroen uit Nijmegen</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="bg-[var(--groen-donker)] text-white py-14 px-6 reveal">
+  <div class="max-w-2xl mx-auto text-center space-y-4">
+    <h3 class="text-3xl font-bold">Heb je vragen of speciale wensen?</h3>
+    <p>Mail ons via <a href="mailto:info@hartelijkegroenten.nl"
+       class="underline text-[var(--groen-licht)] hover:text-white">info@hartelijkegroenten.nl</a></p>
+    <p class="text-sm text-[var(--groen)]">We reageren meestal binnen één werkdag.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-[var(--groen-licht)] texture text-center text-sm text-gray-600 py-8">
+  <div class="flex justify-center gap-6 mb-3">
+    <a href="#" class="text-[var(--groen)] hover:text-[var(--groen-donker)]"><i data-feather="instagram"></i></a>
+    <a href="mailto:info@hartelijkegroenten.nl" class="text-[var(--groen)] hover:text-[var(--groen-donker)]"><i data-feather="mail"></i></a>
+    <a href="#" class="text-[var(--groen)] hover:text-[var(--groen-donker)]"><i data-feather="globe"></i></a>
+  </div>
+  <p>© 2025v4 De Hartelijke Groenten. Gemaakt met liefde &amp; lokaal papier.</p>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  feather.replace();
+
+  /* --------- rendering demo data ---------- */
+  const data=[
+    {img:'klein1.jpg.PNG',title:'Kleurrijk',desc:'Paprika, wortel, biet en snijbiet.',price:'€9,95'},
+    {img:'klein2.PNG',title:'Seizoensmix',desc:'Altijd vers, altijd verrassend.',price:'€11,95'},
+    {img:'klein3.PNG',title:'Pittig',desc:'Met radijs, rucola en rode ui.',price:'€10,50'}
+  ];
+  const grid=document.getElementById('product-grid');
+  const tpl=document.getElementById('card-template').content;
+  let count=0;
+  data.forEach(d=>{
+    const c=tpl.cloneNode(true);
+    c.querySelector('[data-img]').src=d.img;
+    c.querySelector('[data-img]').alt=d.title;
+    c.querySelector('[data-title]').textContent=d.title;
+    c.querySelector('[data-desc]').textContent=d.desc;
+    c.querySelector('[data-price]').textContent=d.price;
+    c.querySelector('.add').onclick=()=>{
+      count++; const badge=document.getElementById('cart-badge');
+      badge.textContent=count; badge.style.animation='bump .3s';
+      setTimeout(()=>badge.style.animation='',300);
+    };
+    grid.appendChild(c);
+  });
+  feather.replace();
+
+  /* --------- reveal on scroll ---------- */
+  const reveals=[...document.querySelectorAll('.reveal')];
+  const io=new IntersectionObserver((e)=>e.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('show');io.unobserve(entry.target);}
+  }),{threshold:.2});
+  reveals.forEach(el=>io.observe(el));
+</script>
+</body>
 </html>
