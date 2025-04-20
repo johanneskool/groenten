@@ -5,29 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>De Hartelijke Groenten</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      :root {
+        --kraft-bruin: #5C3A21;
+      }
+    </style>
   </head>
-  <body class="bg-yellow-100 text-gray-800">
+  <body class="bg-green-50 text-gray-800">
 
     <!-- Header -->
     <header class="bg-white shadow-md">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-green-700">De Hartelijke Groenten</h1>
-        <nav class="space-x-4 text-sm sm:text-base">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+        <div class="flex items-center gap-4">
+          <h1 class="text-2xl font-bold text-green-700 tracking-wide">De Hartelijke Groenten</h1>
+        </div>
+        <nav class="flex items-center gap-6 text-sm sm:text-base">
           <a href="#idee" class="text-green-700 hover:underline">Ons idee</a>
           <a href="#producten" class="text-green-700 hover:underline">Producten</a>
           <a href="#contact" class="text-green-700 hover:underline">Contact</a>
+          <div class="relative">
+            <button class="text-green-800 hover:text-green-600">
+              <i data-feather="shopping-cart"></i>
+            </button>
+            <span class="absolute -top-2 -right-2 bg-green-700 text-white text-xs rounded-full px-1.5">0</span>
+          </div>
         </nav>
       </div>
     </header>
 
     <!-- Hero -->
-    <section class="text-center py-16 px-6 bg-yellow-100">
-      <h2 class="text-4xl font-extrabold text-green-900 mb-4">Verras met een bosje groenten</h2>
+    <section class="text-center py-16 px-6 bg-green-100">
+      <h2 class="text-4xl font-extrabold text-green-900 mb-4 shadow-sm">Verras met een bosje groenten</h2>
       <p class="max-w-2xl mx-auto text-lg text-gray-800 mb-6">
         Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
       </p>
-      <div class="inline-block border-4 border-yellow-300 bg-yellow-50 rounded-xl shadow-md p-4">
-        <img src="image.jpg" alt="Bosje groenten" class="mx-auto w-80 h-auto rounded-md">
+      <div class="inline-block border-4 rounded-xl shadow-lg p-2" style="border-color: var(--kraft-bruin);">
+        <img src="image.jpg" alt="Bosje groenten" class="mx-auto w-80 h-auto rounded-md shadow-md">
       </div>
     </section>
 
@@ -45,40 +59,66 @@
 
     <!-- Producten -->
     <section id="producten" class="bg-white py-12 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold text-green-800 mb-6">Onze bosjes</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div class="bg-yellow-50 border border-yellow-300 p-4 rounded-lg shadow">
-            <h4 class="text-xl font-semibold text-green-700 mb-2">Kleurrijk</h4>
-            <p class="text-gray-700">Met paprika, wortel, rode biet en snijbiet – een regenboog op je aanrecht.</p>
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-2xl font-bold text-green-800 mb-8 text-center">Onze bosjes</h3>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Product 1 -->
+          <div class="bg-green-50 border p-4 rounded-lg shadow" style="border-color: var(--kraft-bruin);">
+            <img src="klein1.jpg" alt="Kleurrijk boeket" class="w-full h-40 object-cover rounded mb-4">
+            <h4 class="text-xl font-semibold text-green-700 mb-1">Kleurrijk</h4>
+            <p class="text-sm text-gray-600 mb-2">Paprika, wortel, rode biet en snijbiet.</p>
+            <p class="font-bold text-green-900 mb-3">€9,95</p>
+            <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
+              Voeg toe aan mandje
+            </button>
           </div>
-          <div class="bg-yellow-50 border border-yellow-300 p-4 rounded-lg shadow">
-            <h4 class="text-xl font-semibold text-green-700 mb-2">Seizoensmix</h4>
-            <p class="text-gray-700">Afhankelijk van het seizoen, altijd vers en lokaal van de markt of boerderij.</p>
+
+          <!-- Product 2 -->
+          <div class="bg-green-50 border p-4 rounded-lg shadow" style="border-color: var(--kraft-bruin);">
+            <img src="klein2.jpg" alt="Seizoensmix" class="w-full h-40 object-cover rounded mb-4">
+            <h4 class="text-xl font-semibold text-green-700 mb-1">Seizoensmix</h4>
+            <p class="text-sm text-gray-600 mb-2">Altijd vers, altijd verrassend.</p>
+            <p class="font-bold text-green-900 mb-3">€11,95</p>
+            <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
+              Voeg toe aan mandje
+            </button>
           </div>
+
+          <!-- Product 3 -->
+          <div class="bg-green-50 border p-4 rounded-lg shadow" style="border-color: var(--kraft-bruin);">
+            <img src="klein3.jpg" alt="Pittig boeket" class="w-full h-40 object-cover rounded mb-4">
+            <h4 class="text-xl font-semibold text-green-700 mb-1">Pittig</h4>
+            <p class="text-sm text-gray-600 mb-2">Met radijs, rucola en rode ui.</p>
+            <p class="font-bold text-green-900 mb-3">€10,50</p>
+            <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
+              Voeg toe aan mandje
+            </button>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- Call to action -->
-    <section class="bg-yellow-200 py-12 px-6 text-center">
-      <h3 class="text-2xl font-bold text-green-800 mb-4">Bestel vandaag nog een groenteboeket</h3>
-      <p class="text-gray-700 mb-6">Lokaal geoogst, prachtig verpakt. Vanaf €9,95 inclusief duurzame verpakking.</p>
+    <section class="bg-green-200 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-900 mb-4">Bestel vandaag nog een groenteboeket</h3>
+      <p class="text-gray-800 mb-6">Lokaal geoogst, prachtig verpakt. Vanaf €9,95 inclusief duurzame verpakking.</p>
       <a href="mailto:bestellen@hartelijkegroenten.nl"
-         class="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800">
+         class="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transform hover:scale-105 transition duration-150">
         Bestel via e-mail
       </a>
     </section>
 
-    <!-- Testimonials (optioneel mockup) -->
+    <!-- Testimonials -->
     <section class="max-w-4xl mx-auto px-6 py-12">
       <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">Wat mensen zeggen</h3>
       <div class="grid gap-6 sm:grid-cols-2">
-        <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-green-400">
+        <div class="bg-white rounded-lg p-4 shadow-md border-l-4" style="border-color: var(--kraft-bruin);">
           <p class="text-gray-700 italic">“Ik gaf het als cadeau en kreeg direct een uitnodiging voor het diner!”</p>
           <p class="text-sm mt-2 text-gray-500">— Marije uit Utrecht</p>
         </div>
-        <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-green-400">
+        <div class="bg-white rounded-lg p-4 shadow-md border-l-4" style="border-color: var(--kraft-bruin);">
           <p class="text-gray-700 italic">“Eindelijk een cadeautje zonder verspilling. En het staat prachtig op tafel.”</p>
           <p class="text-sm mt-2 text-gray-500">— Jeroen uit Nijmegen</p>
         </div>
@@ -98,8 +138,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-sm text-gray-600 py-6 bg-yellow-100">
+    <footer class="text-center text-sm text-gray-600 py-6 bg-green-50">
       © 2025 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.
     </footer>
+
+    <script>feather.replace()</script>
   </body>
 </html>
