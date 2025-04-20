@@ -6,12 +6,13 @@
     <title>De Hartelijke Groenten</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   </head>
-  <body class="bg-green-50 text-gray-800">
-    <!-- Hero section -->
+  <body class="bg-yellow-100 text-gray-800">
+
+    <!-- Header -->
     <header class="bg-white shadow-md">
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold text-green-700">De Hartelijke Groenten</h1>
-        <nav class="space-x-4">
+        <nav class="space-x-4 text-sm sm:text-base">
           <a href="#idee" class="text-green-700 hover:underline">Ons idee</a>
           <a href="#producten" class="text-green-700 hover:underline">Producten</a>
           <a href="#contact" class="text-green-700 hover:underline">Contact</a>
@@ -19,16 +20,18 @@
       </div>
     </header>
 
-    <!-- Intro -->
-    <section class="text-center py-16 px-6 bg-gradient-to-b from-green-100 to-green-50">
-      <h2 class="text-4xl font-extrabold text-green-800 mb-4">Verras met een bosje groenten</h2>
-      <p class="max-w-2xl mx-auto text-lg text-gray-700 mb-6">
-        Groenten als cadeau: lokaal, duurzaam en net zo kleurrijk als bloemen. Met zorg gebundeld en feestelijk verpakt.
+    <!-- Hero -->
+    <section class="text-center py-16 px-6 bg-yellow-100">
+      <h2 class="text-4xl font-extrabold text-green-900 mb-4">Verras met een bosje groenten</h2>
+      <p class="max-w-2xl mx-auto text-lg text-gray-800 mb-6">
+        Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
       </p>
-      <img src="36CA7473-798F-4E81-9FBC-73C79D36307A.png" alt="Bosje groenten" class="mx-auto w-80 h-auto rounded-lg shadow-lg">
+      <div class="inline-block border-4 border-yellow-300 bg-yellow-50 rounded-xl shadow-md p-4">
+        <img src="image.jpg" alt="Bosje groenten" class="mx-auto w-80 h-auto rounded-md">
+      </div>
     </section>
 
-    <!-- Ons idee -->
+    <!-- Waarom groenten -->
     <section id="idee" class="max-w-4xl mx-auto px-6 py-12">
       <h3 class="text-2xl font-bold text-green-800 mb-4">Waarom groenten?</h3>
       <p class="text-gray-700 mb-4">
@@ -45,14 +48,39 @@
       <div class="max-w-4xl mx-auto">
         <h3 class="text-2xl font-bold text-green-800 mb-6">Onze bosjes</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div class="bg-green-100 p-4 rounded-lg shadow">
+          <div class="bg-yellow-50 border border-yellow-300 p-4 rounded-lg shadow">
             <h4 class="text-xl font-semibold text-green-700 mb-2">Kleurrijk</h4>
             <p class="text-gray-700">Met paprika, wortel, rode biet en snijbiet – een regenboog op je aanrecht.</p>
           </div>
-          <div class="bg-green-100 p-4 rounded-lg shadow">
+          <div class="bg-yellow-50 border border-yellow-300 p-4 rounded-lg shadow">
             <h4 class="text-xl font-semibold text-green-700 mb-2">Seizoensmix</h4>
             <p class="text-gray-700">Afhankelijk van het seizoen, altijd vers en lokaal van de markt of boerderij.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="bg-yellow-200 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-800 mb-4">Bestel vandaag nog een groenteboeket</h3>
+      <p class="text-gray-700 mb-6">Lokaal geoogst, prachtig verpakt. Vanaf €9,95 inclusief duurzame verpakking.</p>
+      <a href="mailto:bestellen@hartelijkegroenten.nl"
+         class="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800">
+        Bestel via e-mail
+      </a>
+    </section>
+
+    <!-- Testimonials (optioneel mockup) -->
+    <section class="max-w-4xl mx-auto px-6 py-12">
+      <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">Wat mensen zeggen</h3>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-green-400">
+          <p class="text-gray-700 italic">“Ik gaf het als cadeau en kreeg direct een uitnodiging voor het diner!”</p>
+          <p class="text-sm mt-2 text-gray-500">— Marije uit Utrecht</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-green-400">
+          <p class="text-gray-700 italic">“Eindelijk een cadeautje zonder verspilling. En het staat prachtig op tafel.”</p>
+          <p class="text-sm mt-2 text-gray-500">— Jeroen uit Nijmegen</p>
         </div>
       </div>
     </section>
@@ -61,15 +89,17 @@
     <section id="contact" class="bg-green-800 text-white py-12 px-6">
       <div class="max-w-2xl mx-auto text-center">
         <h3 class="text-2xl font-bold mb-4">Interesse?</h3>
-        <p class="mb-4">Neem contact op of volg ons op Instagram voor de nieuwste bosjes en ideeën.</p>
-        <a href="mailto:info@hartelijkegroenten.nl" class="inline-block bg-white text-green-800 px-6 py-2 rounded font-semibold hover:bg-gray-100">
+        <p class="mb-4">Mail ons, of volg onze avonturen en bosjes op <a href="#" class="underline text-yellow-200 hover:text-white">Instagram</a>.</p>
+        <a href="mailto:info@hartelijkegroenten.nl"
+           class="inline-block bg-white text-green-800 px-6 py-2 rounded font-semibold hover:bg-gray-100">
           Mail ons
         </a>
       </div>
     </section>
 
-    <footer class="text-center text-sm text-gray-600 py-6">
-      © 2025 De Hartelijke Groenten. Alle rechten voorbehouden.
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-600 py-6 bg-yellow-100">
+      © 2025 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.
     </footer>
   </body>
 </html>
