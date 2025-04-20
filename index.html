@@ -7,36 +7,32 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.PNG" />
-
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/png" href="favicon.PNG">
     <style>
       :root {
-        --groen: #2e7d4f;
-        --groen-donker: #1e5937;
-        --kraft-bruin: #3e2718;
-        --groen-licht: #e6f1ea;
+        --kraft-bruin: #4B2E1A;
       }
     </style>
   </head>
-  <body class="bg-[var(--groen-licht)] text-gray-800">
+  <body class="bg-green-50 text-gray-800">
 
     <!-- Header -->
     <header class="bg-white shadow-md">
       <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div class="flex items-center gap-3">
-          <img src="home.jpg" alt="Logo De Hartelijke Groenten" class="h-10 w-10 rounded-full object-cover border-2 border-[var(--groen)]">
-          <h1 class="text-2xl font-bold text-[var(--groen)] tracking-wide">De Hartelijke Groenten</h1>
+          <img src="home.jpg" alt="Logo De Hartelijke Groenten" class="h-10 w-10 rounded-full object-cover border-2 border-green-700">
+          <h1 class="text-2xl font-bold text-green-700 tracking-wide">De Hartelijke Groenten</h1>
         </div>
         <nav class="flex items-center gap-6 text-sm sm:text-base">
-          <a href="#idee" class="text-[var(--groen)] hover:underline">Ons idee</a>
-          <a href="#producten" class="text-[var(--groen)] hover:underline">Producten</a>
-          <a href="#contact" class="text-[var(--groen)] hover:underline">Contact</a>
+          <a href="#idee" class="text-green-700 hover:underline">Ons idee</a>
+          <a href="#producten" class="text-green-700 hover:underline">Producten</a>
+          <a href="#contact" class="text-green-700 hover:underline">Contact</a>
           <div class="relative">
-            <button class="text-[var(--groen-donker)] hover:text-[var(--groen)]">
+            <button class="text-green-800 hover:text-green-600">
               <i data-feather="shopping-cart"></i>
             </button>
-            <span class="absolute -top-2 -right-2 bg-[var(--groen)] text-white text-xs rounded-full px-1.5">0</span>
+            <span class="absolute -top-2 -right-2 bg-green-700 text-white text-xs rounded-full px-1.5">0</span>
           </div>
         </nav>
       </div>
@@ -44,16 +40,18 @@
 
     <!-- Hero met achtergrondafbeelding -->
     <section class="relative h-[600px] py-20 flex items-center justify-center text-center text-white" style="background-image: url('image.jpg'); background-size: cover; background-position: center;">
-      <div class="absolute inset-0 bg-[var(--groen-donker)] bg-opacity-50"></div>
+      <div class="absolute inset-0 bg-green-900 bg-opacity-50"></div>
       <div class="relative z-10 px-4 max-w-2xl">
         <h2 class="text-5xl font-extrabold mb-4 drop-shadow-md">Verras met een bosje groenten</h2>
-        <p class="text-lg drop-shadow-sm">Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.</p>
+        <p class="text-lg drop-shadow-sm">
+          Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
+        </p>
       </div>
     </section>
 
     <!-- Waarom groenten -->
     <section id="idee" class="max-w-4xl mx-auto px-6 py-12">
-      <h3 class="text-2xl font-bold text-[var(--groen)] mb-4">Waarom groenten?</h3>
+      <h3 class="text-2xl font-bold text-green-800 mb-4">Waarom groenten?</h3>
       <p class="text-gray-700 mb-4">
         Bloemen zijn vaak geïmporteerd, bespoten en snel verwelkt. Groenten daarentegen zijn voedzaam, lokaal en veelzijdig.
         Een bosje groenten is niet alleen origineel, maar ook een statement voor duurzaamheid.
@@ -66,20 +64,20 @@
     <!-- Producten -->
     <section id="producten" class="bg-white py-12 px-6">
       <div class="max-w-5xl mx-auto">
-        <h3 class="text-2xl font-bold text-[var(--groen)] mb-8 text-center">Onze bosjes</h3>
+        <h3 class="text-2xl font-bold text-green-800 mb-8 text-center">Onze bosjes</h3>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-          <!-- Herhaal voor elk product -->
-          <div class="bg-[var(--groen-licht)] border-[3px] border-[var(--groen)] rounded-lg p-4 shadow-sm flex gap-4 items-start">
-            <img src="klein1.jpg.PNG" alt="Kleurrijk boeket" class="w-20 h-20 object-cover rounded border-2 border-[var(--groen-donker)] p-0.5">
+          <!-- Product 1 -->
+          <div class="bg-green-100 border-[3px] border-green-700 rounded-lg p-4 shadow-sm flex gap-4 items-start">
+            <img src="klein1.jpg.PNG" alt="Kleurrijk boeket" class="w-20 h-20 object-cover rounded border-2 border-green-800 p-0.5">
             <div class="flex-1 flex flex-col justify-between gap-2">
               <div>
-                <h4 class="text-lg font-semibold text-[var(--groen)]">Kleurrijk</h4>
+                <h4 class="text-lg font-semibold text-green-800">Kleurrijk</h4>
                 <p class="text-sm text-gray-700">Paprika, wortel, biet en snijbiet.</p>
               </div>
               <div class="flex items-center justify-between mt-1">
-                <span class="text-xl font-bold text-[var(--groen-donker)]">€9,95</span>
-                <button class="bg-[var(--groen)] text-white p-2 rounded hover:bg-[var(--groen-donker)] transition" title="Voeg toe aan winkelmandje">
+                <span class="text-xl font-bold text-green-900">€9,95</span>
+                <button class="bg-green-700 text-white p-2 rounded hover:bg-green-800 transition" title="Voeg toe aan winkelmandje">
                   <i data-feather="shopping-cart" class="w-5 h-5"></i>
                 </button>
               </div>
@@ -87,16 +85,16 @@
           </div>
 
           <!-- Product 2 -->
-          <div class="bg-[var(--groen-licht)] border-[3px] border-[var(--groen)] rounded-lg p-4 shadow-sm flex gap-4 items-start">
-            <img src="klein2.PNG" alt="Seizoensmix" class="w-20 h-20 object-cover rounded border-2 border-[var(--groen-donker)] p-0.5">
+          <div class="bg-green-100 border-[3px] border-green-700 rounded-lg p-4 shadow-sm flex gap-4 items-start">
+            <img src="klein2.PNG" alt="Seizoensmix" class="w-20 h-20 object-cover rounded border-2 border-green-800 p-0.5">
             <div class="flex-1 flex flex-col justify-between gap-2">
               <div>
-                <h4 class="text-lg font-semibold text-[var(--groen)]">Seizoensmix</h4>
+                <h4 class="text-lg font-semibold text-green-800">Seizoensmix</h4>
                 <p class="text-sm text-gray-700">Altijd vers, altijd verrassend.</p>
               </div>
               <div class="flex items-center justify-between mt-1">
-                <span class="text-xl font-bold text-[var(--groen-donker)]">€11,95</span>
-                <button class="bg-[var(--groen)] text-white p-2 rounded hover:bg-[var(--groen-donker)] transition" title="Voeg toe aan winkelmandje">
+                <span class="text-xl font-bold text-green-900">€11,95</span>
+                <button class="bg-green-700 text-white p-2 rounded hover:bg-green-800 transition" title="Voeg toe aan winkelmandje">
                   <i data-feather="shopping-cart" class="w-5 h-5"></i>
                 </button>
               </div>
@@ -104,16 +102,16 @@
           </div>
 
           <!-- Product 3 -->
-          <div class="bg-[var(--groen-licht)] border-[3px] border-[var(--groen)] rounded-lg p-4 shadow-sm flex gap-4 items-start">
-            <img src="klein3.PNG" alt="Pittig boeket" class="w-20 h-20 object-cover rounded border-2 border-[var(--groen-donker)] p-0.5">
+          <div class="bg-green-100 border-[3px] border-green-700 rounded-lg p-4 shadow-sm flex gap-4 items-start">
+            <img src="klein3.PNG" alt="Pittig boeket" class="w-20 h-20 object-cover rounded border-2 border-green-800 p-0.5">
             <div class="flex-1 flex flex-col justify-between gap-2">
               <div>
-                <h4 class="text-lg font-semibold text-[var(--groen)]">Pittig</h4>
+                <h4 class="text-lg font-semibold text-green-800">Pittig</h4>
                 <p class="text-sm text-gray-700">Met radijs, rucola en rode ui.</p>
               </div>
               <div class="flex items-center justify-between mt-1">
-                <span class="text-xl font-bold text-[var(--groen-donker)]">€10,50</span>
-                <button class="bg-[var(--groen)] text-white p-2 rounded hover:bg-[var(--groen-donker)] transition" title="Voeg toe aan winkelmandje">
+                <span class="text-xl font-bold text-green-900">€10,50</span>
+                <button class="bg-green-700 text-white p-2 rounded hover:bg-green-800 transition" title="Voeg toe aan winkelmandje">
                   <i data-feather="shopping-cart" class="w-5 h-5"></i>
                 </button>
               </div>
@@ -125,26 +123,26 @@
     </section>
 
     <!-- Samenwerken -->
-    <section class="bg-[var(--groen-licht)] py-12 px-6 text-center border-t-4 border-[var(--kraft-bruin)]">
-      <h3 class="text-2xl font-bold text-[var(--groen)] mb-4">Samenwerken?</h3>
+    <section class="bg-yellow-100 py-12 px-6 text-center border-t-4" style="border-color: var(--kraft-bruin);">
+      <h3 class="text-2xl font-bold text-green-900 mb-4">Samenwerken?</h3>
       <p class="text-gray-800 max-w-xl mx-auto mb-6">
         Ben jij een lokale boer of teler met mooie producten? We werken graag samen met mensen die onze visie op duurzaamheid delen.
       </p>
       <a href="mailto:samenwerken@hartelijkegroenten.nl"
-         class="inline-block bg-[var(--groen)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--groen-donker)] transition">
+         class="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transition">
         Neem contact op
       </a>
     </section>
 
     <!-- Testimonials -->
     <section class="max-w-4xl mx-auto px-6 py-12">
-      <h3 class="text-2xl font-bold text-[var(--groen)] mb-6 text-center">Wat mensen zeggen</h3>
+      <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">Wat mensen zeggen</h3>
       <div class="grid gap-6 sm:grid-cols-2">
-        <div class="bg-white rounded-lg p-4 shadow-md border-l-[6px] border-[var(--kraft-bruin)]">
+        <div class="bg-white rounded-lg p-4 shadow-md border-l-[6px]" style="border-color: var(--kraft-bruin);">
           <p class="text-gray-700 italic">“Ik gaf het als cadeau en kreeg direct een uitnodiging voor het diner!”</p>
           <p class="text-sm mt-2 text-gray-500">— Marije uit Utrecht</p>
         </div>
-        <div class="bg-white rounded-lg p-4 shadow-md border-l-[6px] border-[var(--kraft-bruin)]">
+        <div class="bg-white rounded-lg p-4 shadow-md border-l-[6px]" style="border-color: var(--kraft-bruin);">
           <p class="text-gray-700 italic">“Eindelijk een cadeautje zonder verspilling. En het staat prachtig op tafel.”</p>
           <p class="text-sm mt-2 text-gray-500">— Jeroen uit Nijmegen</p>
         </div>
@@ -152,22 +150,22 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="bg-[var(--groen-donker)] text-white py-12 px-6">
+    <section id="contact" class="bg-green-800 text-white py-12 px-6">
       <div class="max-w-2xl mx-auto text-center">
         <h3 class="text-2xl font-bold mb-4">Heb je vragen of speciale wensen?</h3>
-        <p class="mb-4">Mail ons via <a href="mailto:info@hartelijkegroenten.nl" class="underline text-[var(--groen-licht)] hover:text-white">info@hartelijkegroenten.nl</a></p>
-        <p class="text-sm text-[var(--groen)]">We reageren meestal binnen één werkdag.</p>
+        <p class="mb-4">Mail ons via <a href="mailto:info@hartelijkegroenten.nl" class="underline text-yellow-200 hover:text-white">info@hartelijkegroenten.nl</a></p>
+        <p class="text-sm text-green-200">We reageren meestal binnen één werkdag.</p>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[var(--groen-licht)] text-center text-sm text-gray-600 py-6">
+    <footer class="bg-green-50 text-center text-sm text-gray-600 py-6">
       <div class="flex justify-center gap-6 mb-2">
-        <a href="#" class="text-[var(--groen)] hover:text-[var(--groen-donker)]"><i data-feather="instagram"></i></a>
-        <a href="mailto:info@hartelijkegroenten.nl" class="text-[var(--groen)] hover:text-[var(--groen-donker)]"><i data-feather="mail"></i></a>
-        <a href="#" class="text-[var(--groen)] hover:text-[var(--groen-donker)]"><i data-feather="globe"></i></a>
+        <a href="#" class="text-green-800 hover:text-green-600"><i data-feather="instagram"></i></a>
+        <a href="mailto:info@hartelijkegroenten.nl" class="text-green-800 hover:text-green-600"><i data-feather="mail"></i></a>
+        <a href="#" class="text-green-800 hover:text-green-600"><i data-feather="globe"></i></a>
       </div>
-      <p>© 2025v6 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.</p>
+      <p>© 2025v4 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.</p>
     </footer>
 
     <script>feather.replace()</script>
