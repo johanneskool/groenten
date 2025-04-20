@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
       :root {
-        --kraft-bruin: #5C3A21;
+        --kraft-bruin: #4B2E1A;
       }
     </style>
   </head>
@@ -38,7 +38,7 @@
       <p class="max-w-2xl mx-auto text-lg text-gray-800 mb-6">
         Duurzaam, kleurrijk en verrassend lekker. Geef een boeket dat blijft hangen.
       </p>
-      <div class="inline-block border-4 rounded-xl shadow-lg p-2" style="border-color: var(--kraft-bruin);">
+      <div class="inline-block border-[5px] rounded-xl shadow-lg p-2" style="border-color: var(--kraft-bruin);">
         <img src="image.jpg" alt="Bosje groenten" class="mx-auto w-80 h-auto rounded-md shadow-md">
       </div>
     </section>
@@ -62,60 +62,69 @@
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
           <!-- Product 1 -->
-          <div class="bg-green-50 border p-4 rounded-lg shadow" style="border-color: var(--kraft-bruin);">
-            <img src="klein1.jpg.PNG" alt="Kleurrijk boeket" class="w-24 h-24 object-cover rounded mb-4 mx-auto">
-            <h4 class="text-xl font-semibold text-green-700 mb-1 text-center">Kleurrijk</h4>
-            <p class="text-sm text-gray-600 mb-2 text-center">Paprika, wortel, biet en snijbiet.</p>
-            <p class="font-bold text-green-900 mb-3 text-center">€9,95</p>
-            <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
-              Voeg toe aan mandje
-            </button>
+          <div class="bg-green-50 border-[4px] p-4 rounded-lg shadow flex items-center gap-4" style="border-color: var(--kraft-bruin);">
+            <img src="klein1.jpg.PNG" alt="Kleurrijk boeket" class="w-24 h-24 object-cover rounded border-2 p-0.5" style="border-color: var(--kraft-bruin);">
+            <div class="flex-1">
+              <h4 class="text-xl font-semibold text-green-700 mb-1">Kleurrijk</h4>
+              <p class="text-sm text-gray-600 mb-1">Paprika, wortel, biet en snijbiet.</p>
+              <p class="text-xl font-bold text-green-900 mb-2">€9,95</p>
+              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
+                Voeg toe aan mandje
+              </button>
+            </div>
           </div>
 
           <!-- Product 2 -->
-          <div class="bg-green-50 border p-4 rounded-lg shadow" style="border-color: var(--kraft-bruin);">
-            <img src="klein2.PNG" alt="Seizoensmix" class="w-24 h-24 object-cover rounded mb-4 mx-auto">
-            <h4 class="text-xl font-semibold text-green-700 mb-1 text-center">Seizoensmix</h4>
-            <p class="text-sm text-gray-600 mb-2 text-center">Altijd vers, altijd verrassend.</p>
-            <p class="font-bold text-green-900 mb-3 text-center">€11,95</p>
-            <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
-              Voeg toe aan mandje
-            </button>
+          <div class="bg-green-50 border-[4px] p-4 rounded-lg shadow flex items-center gap-4" style="border-color: var(--kraft-bruin);">
+            <img src="klein2.PNG" alt="Seizoensmix" class="w-24 h-24 object-cover rounded border-2 p-0.5" style="border-color: var(--kraft-bruin);">
+            <div class="flex-1">
+              <h4 class="text-xl font-semibold text-green-700 mb-1">Seizoensmix</h4>
+              <p class="text-sm text-gray-600 mb-1">Altijd vers, altijd verrassend.</p>
+              <p class="text-xl font-bold text-green-900 mb-2">€11,95</p>
+              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
+                Voeg toe aan mandje
+              </button>
+            </div>
           </div>
 
           <!-- Product 3 -->
-          <div class="bg-green-50 border p-4 rounded-lg shadow" style="border-color: var(--kraft-bruin);">
-            <img src="klein3.PNG" alt="Pittig boeket" class="w-24 h-24 object-cover rounded mb-4 mx-auto">
-            <h4 class="text-xl font-semibold text-green-700 mb-1 text-center">Pittig</h4>
-            <p class="text-sm text-gray-600 mb-2 text-center">Met radijs, rucola en rode ui.</p>
-            <p class="font-bold text-green-900 mb-3 text-center">€10,50</p>
-            <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
-              Voeg toe aan mandje
-            </button>
+          <div class="bg-green-50 border-[4px] p-4 rounded-lg shadow flex items-center gap-4" style="border-color: var(--kraft-bruin);">
+            <img src="klein3.PNG" alt="Pittig boeket" class="w-24 h-24 object-cover rounded border-2 p-0.5" style="border-color: var(--kraft-bruin);">
+            <div class="flex-1">
+              <h4 class="text-xl font-semibold text-green-700 mb-1">Pittig</h4>
+              <p class="text-sm text-gray-600 mb-1">Met radijs, rucola en rode ui.</p>
+              <p class="text-xl font-bold text-green-900 mb-2">€10,50</p>
+              <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
+                Voeg toe aan mandje
+              </button>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Call to action -->
-    <section class="bg-green-200 py-12 px-6 text-center">
-      <h3 class="text-2xl font-bold text-green-900 mb-4">Voeg toe aan je mandje en bestel eenvoudig</h3>
-      <p class="text-gray-800 mb-6">Geen gedoe. Kies je bosje, voeg toe, en wij doen de rest.</p>
-      <button class="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transform hover:scale-105 transition duration-150">
-        Bekijk je mandje
-      </button>
+    <!-- Samenwerken -->
+    <section class="bg-yellow-100 py-12 px-6 text-center border-t-4" style="border-color: var(--kraft-bruin);">
+      <h3 class="text-2xl font-bold text-green-900 mb-4">Samenwerken?</h3>
+      <p class="text-gray-800 max-w-xl mx-auto mb-6">
+        Ben jij een lokale boer of teler met mooie producten? We werken graag samen met mensen die onze visie op duurzaamheid delen.
+      </p>
+      <a href="mailto:samenwerken@hartelijkegroenten.nl"
+         class="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transition">
+        Neem contact op
+      </a>
     </section>
 
     <!-- Testimonials -->
     <section class="max-w-4xl mx-auto px-6 py-12">
       <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">Wat mensen zeggen</h3>
       <div class="grid gap-6 sm:grid-cols-2">
-        <div class="bg-white rounded-lg p-4 shadow-md border-l-4" style="border-color: var(--kraft-bruin);">
+        <div class="bg-white rounded-lg p-4 shadow-md border-l-[6px]" style="border-color: var(--kraft-bruin);">
           <p class="text-gray-700 italic">“Ik gaf het als cadeau en kreeg direct een uitnodiging voor het diner!”</p>
           <p class="text-sm mt-2 text-gray-500">— Marije uit Utrecht</p>
         </div>
-        <div class="bg-white rounded-lg p-4 shadow-md border-l-4" style="border-color: var(--kraft-bruin);">
+        <div class="bg-white rounded-lg p-4 shadow-md border-l-[6px]" style="border-color: var(--kraft-bruin);">
           <p class="text-gray-700 italic">“Eindelijk een cadeautje zonder verspilling. En het staat prachtig op tafel.”</p>
           <p class="text-sm mt-2 text-gray-500">— Jeroen uit Nijmegen</p>
         </div>
@@ -126,14 +135,19 @@
     <section id="contact" class="bg-green-800 text-white py-12 px-6">
       <div class="max-w-2xl mx-auto text-center">
         <h3 class="text-2xl font-bold mb-4">Heb je vragen of speciale wensen?</h3>
-        <p class="mb-4">Mail ons gerust via <a href="mailto:info@hartelijkegroenten.nl" class="underline text-yellow-200 hover:text-white">info@hartelijkegroenten.nl</a></p>
-        <p class="text-sm text-green-200">We reageren binnen één werkdag.</p>
+        <p class="mb-4">Mail ons via <a href="mailto:info@hartelijkegroenten.nl" class="underline text-yellow-200 hover:text-white">info@hartelijkegroenten.nl</a></p>
+        <p class="text-sm text-green-200">We reageren meestal binnen één werkdag.</p>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-sm text-gray-600 py-6 bg-green-50">
-      © 2025v4 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.
+    <footer class="bg-green-50 text-center text-sm text-gray-600 py-6">
+      <div class="flex justify-center gap-6 mb-2">
+        <a href="#" class="text-green-800 hover:text-green-600"><i data-feather="instagram"></i></a>
+        <a href="mailto:info@hartelijkegroenten.nl" class="text-green-800 hover:text-green-600"><i data-feather="mail"></i></a>
+        <a href="#" class="text-green-800 hover:text-green-600"><i data-feather="globe"></i></a>
+      </div>
+      <p>© 2025v4 De Hartelijke Groenten. Gemaakt met liefde en lokaal papier.</p>
     </footer>
 
     <script>feather.replace()</script>
